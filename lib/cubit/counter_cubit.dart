@@ -10,6 +10,7 @@ class CounterCubit extends Cubit<int> {
 
   void decrement() {
     //print('###### Decrement Before $state');
+    if (state == 0) return;
     emit(state - 1);
     //print('###### Decrement After $state');
   }
